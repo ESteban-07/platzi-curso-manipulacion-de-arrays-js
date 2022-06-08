@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge: forEach</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+
+    <script>
+        const tasks = [
+            {
+                title: 'Design logo',
+                completed: true,
+            },
+            {
+                title: 'Develop head',
+                completed: false,
+            },
+            {
+                title: 'Develop Main',
+                completed: true,
+            },
+            {
+                title: 'Develop Footer',
+                completed: false,
+            },
+        ];
+
+        const demo = document.getElementById('demo');
+
+        tasks.forEach(function (task) {
+            demo.innerHTML +=
+                `<li>
+                <input type="checkbox" ${task.completed ? 'checked' : ''} />
+                ${task.title}
+                </li>`;
+        });
+    </script>
+</body>
+
+</html>
